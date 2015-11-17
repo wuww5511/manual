@@ -32,7 +32,7 @@ NEJ中的控件通过类的`_$allocate()`方法来创建实例。参数为自定
 
 
 ###UI控件html结构
-通过重写父类的`__initXGui()`方法来设置UI控件的HTML结构。通过将`this.__body`赋值为DOM节点或者`this.__seed_html`赋值为html字符串来设置HTML结构。通过将`this.__seed_css`赋值为类名来为HTML结构添加css类.
+通过重写父类的`__initXGui()`方法来设置UI控件的HTML结构。通过将`this.__body`赋值为DOM节点或者`this.__seed_html`赋值为模板序列号(通过`tpl._$addNodeTemplate()`获取)来设置HTML结构。通过将`this.__seed_css`赋值为类名来为HTML结构添加css类.
 
 	define([
     	'base/klass',
