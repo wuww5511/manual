@@ -36,15 +36,16 @@ NEJ中的控件通过类的`_$allocate()`方法来创建实例。参数为自定
 
 	define([
     	'base/klass',
-    	'ui/base'
-	],function(_k,_i,_p){
+    	'ui/base',
+    	'util/template/tpl'
+	],function(_k,_i,tpl,_p){
     	_p._$$MyUI = _k._$klass();
     	var _pro = _p._$$MyUI._$extend(_i,_$$Abstract);
     	_pro.__initXGui = function(){
     		//方法1：
     		this.__body = document.createElement('div');
     		//方法2：
-    		this.__seed_html = '<div></div>';
+    		this.__seed_html = tpl._$addNodeTemplate('<div></div>');
     		//添加类
     		this.__seed_css = 'myCss';
     	};
