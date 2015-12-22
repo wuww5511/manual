@@ -27,7 +27,7 @@ _解决办法_：为无法被点击的子元素的父元素添加`position:relat
 #####png24出现黑边
 以png24为背景的div在用jquery fadeIn，fadeOut的时候会出现黑边。
 <br>
-_解决方法_:为该div添加一个父元素。对它的父元素使用fadeIn，fadeOut方法
+_解决方法_:为该div添加一个父元素，为父元素添加`filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3000000', endColorstr='#b300000'); `。对它的父元素使用fadeIn，fadeOut方法
 ####总结
 1.	ie8及以下虽然不支持css3，但是可以通过ie自带的filter实现类似的效果。
 
