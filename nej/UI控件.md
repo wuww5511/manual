@@ -7,7 +7,7 @@ UI控件类需要继承NEJ的UI控件基类（ui/base._$$Abstract）
     	'ui/base'
 	],function(_k,_i,_p){
     	_p._$$MyUI = _k._$klass();
-    	var _pro = _p._$$MyUI._$extend(_i,_$$Abstract);
+    	var _pro = _p._$$MyUI._$extend(_i._$$Abstract);
 	});
 
 ###UI控件实例的创建
