@@ -34,6 +34,7 @@
 		//返回‘新函数’
     	return function() {
       		context = this;
+      		// 每次调用新函数，会跟新原函数执行时的参数
       		args = arguments;
       		
       		//记录最近一次新函数被执行的时间
