@@ -54,5 +54,43 @@
     	};
   	};
   	
+###获取浏览器宽度
+	
+	var _ww = window.innerWidth || document.documentElement.clientWidth;
+ 
+ 
+###鼠标事件位置
+`event.screenX`, `event.screenY` 相对屏幕左上角的位置
 
-  	
+`event.clientX`, `event.clentY` 相对浏览器左上角的位置
+
+###页面跳转时的ajax
+当页面注销时发出ajax请求，个别浏览器可能无法成功发出请求。
+解决方法：ajax异步请求改为同步
+
+###正则表达式
+1，选取一个指定字符串
+
+		
+		var reg = /\s/;
+		reg.test('absa dfc');
+		console.log(RegExp.$1)
+
+2,选取多个指定字符串
+
+		var reg = /\s/g;
+		var res = 'abc dd'.match(reg);
+		
+3,默认为贪婪模式，在使正则能够正常匹配的条件下，尽可能多的匹配
+
+4,非贪婪模式，与贪婪模式相对应，尽可能少的匹配
+
+		//在量词后加一个问号‘？’，表示进入非贪婪模式
+		var reg = /aabb(adsf)(\s+?)asdfsdf/g;
+		
+		
+###获取元素宽高
+通过css设置元素宽高的时，形式可能是‘100%’， ‘auto’， ‘1em’， ……。
+要获取以px为单位的大小，可以通过`window.getComputedStyle（）`， 但是IE8不支持啊~~~
+IE中的`node.currentStyle`返回的不是以px为单位的大小。
+怎么办呢？用`node.clientHeight`,`node.clientWidth`
