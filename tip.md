@@ -81,9 +81,18 @@
 		var reg = /\s/g;
 		var res = 'abc dd'.match(reg);
 		
-3,默认为贪婪模式，在使正则能够正常匹配的条件下，尽可能多的匹配
+3,选取多个字符串的指定部分
 
-4,非贪婪模式，与贪婪模式相对应，尽可能少的匹配
+		var reg = /\s(\S)\s/g;
+		var str = " a  b  c  d  e  f  ";
+		var res = reg.exec(str);
+		while(res){
+			console.log(RegExp.$1);
+		}
+		
+4,默认为贪婪模式，在使正则能够正常匹配的条件下，尽可能多的匹配
+
+5,非贪婪模式，与贪婪模式相对应，尽可能少的匹配
 
 		//在量词后加一个问号‘？’，表示进入非贪婪模式
 		var reg = /aabb(adsf)(\s+?)asdfsdf/g;
