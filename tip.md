@@ -88,6 +88,7 @@
 		var res = reg.exec(str);
 		while(res){
 			console.log(RegExp.$1);
+			res = reg.exec(str);
 		}
 		
 4,默认为贪婪模式，在使正则能够正常匹配的条件下，尽可能多的匹配
@@ -102,4 +103,15 @@
 通过css设置元素宽高的时，形式可能是‘100%’， ‘auto’， ‘1em’， ……。
 要获取以px为单位的大小，可以通过`window.getComputedStyle（）`， 但是IE8不支持啊~~~
 IE中的`node.currentStyle`返回的不是以px为单位的大小。
-怎么办呢？用`node.clientHeight`,`node.clientWidth`
+怎么办呢？用`node.clientHeight`,`node.clientWidth`。（包括padding）
+`node.offsetWidth`, `node.offsetHeight`是包括边框的宽高。
+
+###获取元素内的文本
+ele.innerText || ele.textContent
+(fixFox下无innerText)
+
+###获取窗口的滚动距离
+`document.documentElement.scrollTop || document.body.scrollTop`
+
+###keydown,keypress
+keydown事件返回的code为按键在键盘上的代码；keypress返回的code为ASCII码，keypress只会在字符键按下时触发
