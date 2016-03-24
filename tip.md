@@ -57,7 +57,13 @@
 ###获取浏览器宽度
 	
 	var _ww = window.innerWidth || document.documentElement.clientWidth;
+	var _wh = window.innerHeight || document.documentElement.clientHeight;
+	
+ window.innerWidth, window.innerHeight(IE8及以前的不支持)
  
+ document.documentElement.clientWidth, document.documentElement.clientHeight(标准模式下获取浏览器宽高)
+ 
+ document.body.clientWidth,document.body.clientHeight(混杂模式，应该用不上~~)
  
 ###鼠标事件位置
 `event.screenX`, `event.screenY` 相对屏幕左上角的位置
