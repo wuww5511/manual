@@ -121,3 +121,18 @@ ele.innerText || ele.textContent
 
 ###keydown,keypress
 keydown事件返回的code为按键在键盘上的代码；keypress返回的code为ASCII码，keypress只会在字符键按下时触发
+
+###浏览器内粘贴文本
+亲测，兼容ie8~（如果不放心可以捕获一下异常~）
+
+```
+<textarea id="ta">to copy</textarea>
+
+```
+
+```
+//选择输入框内内容
+document.getElementById('ta').select();
+//复制
+document.execCommand('copy');
+```

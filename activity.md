@@ -29,5 +29,5 @@ _解决办法_：为无法被点击的子元素的父元素添加`position:relat
 <br>
 _解决方法_:为该div添加一个父元素，为父元素添加`filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3000000', endColorstr='#b300000'); `。对它的父元素使用fadeIn，fadeOut方法
 ####总结
-1.	ie8及以下虽然不支持css3，但是可以通过ie自带的filter实现类似的效果。
+1.	ie8及以下虽然不支持css3，但是可以通过ie自带的filter实现类似的效果。(ie11不支持filter)
 
