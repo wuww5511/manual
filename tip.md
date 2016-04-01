@@ -136,3 +136,7 @@ document.getElementById('ta').select();
 //复制
 document.execCommand('copy');
 ```
+
+###table布局（待总结）
+
+###zIdnex（待总结）
