@@ -137,6 +137,13 @@ document.getElementById('ta').select();
 document.execCommand('copy');
 ```
 
-###table布局（待总结）
+###table布局（总结中…… ）
+`display:table-cell`的特性：
+*	只能和table-cell和float的元素在一行
+*	可以为它设置宽度，但是在布局被压缩时，它的宽度会缩小。类似给它设置了一个最大宽带。
+*	无法为它设置margin
+*	多个table-cell放在一起，那么它们会是等高的
+*	`float`,`position:absolute`会破坏它的display属性
+*	
 
-###zIdnex（待总结）
+###zIndex（待总结）
