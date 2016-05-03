@@ -10,3 +10,6 @@
 *	[superagent](http://visionmedia.github.io/superagent/) http方面的库
 *	[cheerio](https://github.com/cheeriojs/cheerio) 解析html的库
 *	`url.resolve`计算真实的跳转链接. `url.resolve("http://a/b", "/c")` 结果 `"http://a/c"`
+*	`res.send("string");` 会同时发送报头和报文。如果在该函数之前调用`res.write("string")`会报错。报头必须在报文的前面发送
+*	[eventproxy](https://github.com/JacksonTian/eventproxy)实现事件的绑定和触发
+*	[async](https://github.com/caolan/async) 用来控制并发数量（待看）
