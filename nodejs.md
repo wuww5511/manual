@@ -25,3 +25,5 @@
 		Buffer.concat(chunks, size);
 		
 *	在网络传输中，以buffer传输数据效率更高
+*	require('path')模块处理文件路径的处理；path.join('/a/b', '/c') => '/a/b/c'
+*	require默认会将已经加载过的模块缓存；想要删除缓存的话，`delete require.cache[require.resolve(_file)];`

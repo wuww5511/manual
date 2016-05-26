@@ -82,7 +82,7 @@ document.getElementById('ta').select();
 document.execCommand('copy');
 ```
 
-###table布局（总结中…… ）
+###table布局
 `display:table-cell`的特性：
 *	只能和table-cell和float的元素在一行
 *	可以为它设置宽度，但是在布局被压缩时，它的宽度会缩小。类似给它设置了一个最大宽带。
@@ -92,3 +92,5 @@ document.execCommand('copy');
 *	
 
 ###zIndex（待总结）
+
+### 全局变量可以作为参数传递给局部函数，方便局部函数调用
